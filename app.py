@@ -20,6 +20,9 @@ treefig = getTreeMapGraphOfAllCategories()
 
 # Build your components
 app = Dash(__name__, external_stylesheets=[dbc.themes.VAPOR])
+server = app.server
+
+
 mytitle = dcc.Markdown(children="# Breakdown of Balance Sheet Categories for Failed Banks")
 CategoryBeakdownChart = dcc.Graph(figure={})
 CategoryUserSelectionChart = dcc.Graph(id='treemap',figure=treefig, clickData="Assets")
