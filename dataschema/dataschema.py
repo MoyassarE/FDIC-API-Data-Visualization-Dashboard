@@ -50,13 +50,11 @@ def getDataSchema():
 
 def getOutputAPIData():
     ProjectPath = getProjectPath()
-    FileMapping = 'bankfindAPI\\output\\FDIC API Pulled Data.xlsx' # Insert path of the file in the project
+    FileMapping = 'bankfindAPI\\output\\FDIC API Pulled Data.csv' # Insert path of the file in the project
     FileLocation = ProjectPath + FileMapping
-    
-    sheetname = "query1"
 
     # when you index a column is is no longer in the dataset, but it is used to look up values
-    BankFinancialData = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None)
+    BankFinancialData = pd.read_csv(FileLocation)
 
     return BankFinancialData       
 
