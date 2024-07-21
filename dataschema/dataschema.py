@@ -19,7 +19,10 @@ import os
 
 
 
-
+# The project location can be specified as either "Personal Computer" or "Online"
+# If online the necessary reference data will pull from the Github website
+# This modification is necessary to allow an online server to run this project
+# If a personal computer is used, the files will be taken from the respective folder in your computer
 ProjectLocation = "Online"
 #ProjectLocation = "Personal Computer"
 
@@ -42,7 +45,7 @@ def getInputPopulation():
         SourceListOfBanks = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None)    
     
     elif ProjectLocation == "Online":
-        input_data_url = 'https://raw.githubusercontent.com/MoyassarE/FDIC-API-Data-Visualization-Dashboard/main/dataschema/dataschema.csv'
+        input_data_url = 'https://raw.githubusercontent.com/MoyassarE/FDIC-API-Data-Visualization-Dashboard/main/input/banklist.csv'
         SourceListOfBanks = pd.read_csv(input_data_url)
         
     return SourceListOfBanks
@@ -81,7 +84,7 @@ def getOutputAPIData():
 
 def update_Data_Schema():
     # After updates are made to the excel sheet file 
-    # This method will save the data schema data into a csv file
+    # This method will save the data schema tab into a csv file
     # So that after it is pushed to the github library
     # This data can be pullled using a github URL 
     # Allowing this code to be run in online server
@@ -312,11 +315,3 @@ def getTreeMapGraphOfAllCategories():
     
     return treefig
 
-ProjectLocation = "Personal Computer"
-input_data = getInputPopulation()
-
-ProjectPath = getProjectPath()
-FileMapping = 'bankfindAPI\\input\\banklist.csv' # Insert path of the file in the project
-FileLocation = ProjectPath + FileMapping
-
-input_data.to_csv(FileLocation)

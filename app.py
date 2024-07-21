@@ -45,13 +45,14 @@ def update_graph(userclick): # function arguments come from the component_proper
         
     return fig # returned objects are assigned to the component property of the Output
 
-
+# If running on personal browser insert port=8050 into function below
 # Run app
 if __name__=='__main__':
-    app.run_server(port=8050)
+    app.run_server(debug=False)
     
     
 '''
+If running on personal browser,
 The dashboad will run on your local host. Paste the below location to your browser:
 
 127.0.0.1:8050
