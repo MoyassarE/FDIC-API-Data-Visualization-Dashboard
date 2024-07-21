@@ -19,6 +19,10 @@ import os
 
 
 
+
+ProjectLocation = "Online"
+#ProjectLocation = "Personal Computer"
+
 def getProjectPath():
     currentfilepath = os.path.abspath(__file__)
     ProjectName = "bankfindAPI"
@@ -27,34 +31,51 @@ def getProjectPath():
     return ProjectPath[0] 
 
 def getInputPopulation():
-    ProjectPath = getProjectPath()
-    FileMapping = 'bankfindAPI\\input\\banklist.xlsx' # Insert path of the file in the project
-    FileLocation = ProjectPath + FileMapping
     
-    sheetname = "banklist"
+    if ProjectLocation == "Personal Computer":
+        ProjectPath = getProjectPath()
+        FileMapping = 'bankfindAPI\\input\\banklist.xlsx' # Insert path of the file in the project
+        FileLocation = ProjectPath + FileMapping
+        
+        sheetname = "banklist"
+        
+        SourceListOfBanks = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None)    
     
-    SourceListOfBanks = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None)    
-    
+    elif ProjectLocation == "Online":
+        input_data_url = 'https://raw.githubusercontent.com/MoyassarE/FDIC-API-Data-Visualization-Dashboard/main/dataschema/dataschema.csv'
+        SourceListOfBanks = pd.read_csv(input_data_url)
+        
     return SourceListOfBanks
 
 def getDataSchema():
-    ProjectPath = getProjectPath()
-    FileMapping = 'bankfindAPI\\dataschema\\Selected Financial Data.xlsx' # Insert path of the file in the project
-    FileLocation = ProjectPath + FileMapping    
+    if ProjectLocation == "Personal Computer":
+        ProjectPath = getProjectPath()
+        FileMapping = 'bankfindAPI\\dataschema\\Selected Financial Data.xlsx' # Insert path of the file in the project
+        FileLocation = ProjectPath + FileMapping    
+        
+        sheetname = "Selected Data"
+        
+        DataSchema = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None) 
     
-    sheetname = "Selected Data"
+    elif ProjectLocation == "Online":
+        dataschema_url = 'https://raw.githubusercontent.com/MoyassarE/FDIC-API-Data-Visualization-Dashboard/main/dataschema/dataschema.csv'
+        DataSchema = pd.read_csv(dataschema_url)
     
-    DataSchema = pd.read_excel(FileLocation, sheet_name = sheetname, skiprows = None) 
     
     return DataSchema
 
 def getOutputAPIData():
-    ProjectPath = getProjectPath()
-    FileMapping = 'bankfindAPI\\output\\FDIC API Pulled Data.csv' # Insert path of the file in the project
-    FileLocation = ProjectPath + FileMapping
-
-    # when you index a column is is no longer in the dataset, but it is used to look up values
-    BankFinancialData = pd.read_csv(FileLocation)
+    if ProjectLocation == "Personal Computer":
+        ProjectPath = getProjectPath()
+        FileMapping = 'bankfindAPI\\output\\FDIC API Pulled Data.csv' # Insert path of the file in the project
+        FileLocation = ProjectPath + FileMapping
+    
+        # when you index a column is is no longer in the dataset, but it is used to look up values
+        BankFinancialData = pd.read_csv(FileLocation)
+    
+    elif ProjectLocation == "Online":
+        output_data_url = 'https://raw.githubusercontent.com/MoyassarE/FDIC-API-Data-Visualization-Dashboard/main/output/FDIC%20API%20Pulled%20Data.csv'
+        BankFinancialData = pd.read_csv(output_data_url)
 
     return BankFinancialData       
 
@@ -291,6 +312,11 @@ def getTreeMapGraphOfAllCategories():
     
     return treefig
 
+ProjectLocation = "Personal Computer"
+input_data = getInputPopulation()
 
+ProjectPath = getProjectPath()
+FileMapping = 'bankfindAPI\\input\\banklist.csv' # Insert path of the file in the project
+FileLocation = ProjectPath + FileMapping
 
-
+input_data.to_csv(FileLocation)
