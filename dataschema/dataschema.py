@@ -58,6 +58,22 @@ def getOutputAPIData():
 
     return BankFinancialData       
 
+def update_Data_Schema():
+    # After updates are made to the excel sheet file 
+    # This method will save the data schema data into a csv file
+    # So that after it is pushed to the github library
+    # This data can be pullled using a github URL 
+    # Allowing this code to be run in online server
+    # as opposed to on a personal computer
+    
+    
+    selected_data = getDataSchema()
+    ProjectPath = getProjectPath()
+    FileMapping = 'bankfindAPI\\dataschema\\' 
+    CSV_Name = 'dataschema.csv'
+    Full_Path = ProjectPath + FileMapping + CSV_Name
+    selected_data.to_csv(Full_Path)
+    
 
 
 ################################################
@@ -276,13 +292,5 @@ def getTreeMapGraphOfAllCategories():
     return treefig
 
 
-def testFunction():
-    print("Printing from dataschema module")
-    
 
-DefaultedBankTable = getOutputAPIData()
 
-ProjectPath = getProjectPath()
-OutputMapping = 'bankfindAPI\\output\\FDIC API Pulled Data Example 2.xlsx' # Insert path of the file in the project
-OutputLocation = ProjectPath + OutputMapping      
-DefaultedBankTable.to_excel(OutputLocation,'query1')

@@ -1,0 +1,93 @@
+,Description,Code,Amount,Level 1 Category,Level 2 Category,Level 3 Category
+0,Report Date,REPDTE,20231231,,,
+1,Institution name,NAME,ISABELLA BANK,,,
+2,FDIC Certificate #,CERT,1005,,,
+3,Cash and Balances due from Depository Institutions,CHBAL,33561,Assets,Cash,
+4,U.S. Treasury Securities,SCUST,214799,Assets,Securities,
+5,Non-mortgage Backed: Issued by U.S. Government Agencies or Sponsored (GSEs),SCASPNSUM,0,Assets,Securities,
+6,Residential Mortgage Backed: Pass-Through Issued by F.N.M.A. and F.H.L.M.C.,SCFMN,32660,Assets,Securities,
+7,Residential Mortgage Backed: Pass-Through Issued by G.N.M.A.,SCGNM,154,Assets,Securities,
+8,Collateralized Mortgage Obligations (CMOs) and REMICS Issued by U.S. Government Agencies or Sponsored Agencies,SCCOL,41039,Assets,Securities,
+9,"Commercial Mortgage-Backed Pass-Through Securities Issued or Guaranteed by F.N.M.A., F.H.L.M.C., or G.N.M.A.",SCCPTG,0,Assets,Securities,
+10,Commercial Mortgage-Backed Other Securities Issued or Guaranteed by U.S. Government Agencies or Sponsored Agencies,SCCMOG,0,Assets,Securities,
+11,Securities Issued by States & Political Subdivisions,SCMUNI,92877,Assets,Securities,
+12,Privately Issued Residential Mortgage-Backed Securities,SCRMBPI,0,Assets,Securities,
+13,Other Commercial Mortgage-Backed Securities,SCCMOS,0,Assets,Securities,
+14,Asset Backed Securities,SCABS,0,Assets,Securities,
+15,Structured Financial Products,SCSFP,136735,Assets,Securities,
+16,Other,SCODOT,9882,Assets,Securities,
+17,Construction and Land Development Real Estate Loans,LNRECONS,39600,Assets,Loans,Real Estate Loans
+18,Commercial Real Estate Loans,LNRENRES,414176,Assets,Loans,Real Estate Loans
+19,Multifamily Residential Real Estate Loans,LNREMULT,77602,Assets,Loans,Real Estate Loans
+20,1-4 Family Residential Real Estate Loans,LNRERES,437998,Assets,Loans,Real Estate Loans
+21,Farmland Real Estate Loans,LNREAG,69457,Assets,Loans,Real Estate Loans
+22,Farm Loans,LNAG,30598,Assets,Loans,Farm Loans
+23,Commercial and Industrial Loans,LNCI,146699,Assets,Loans,Commercial and Industrial Loans
+24,Credit Cards,LNCRCD,0,Assets,Loans,Loans to Individuals
+25,Other Revolving Credit Plans,LNCONRP,625,Assets,Loans,Loans to Individuals
+26,Automobile Loans,LNAUTO,52448,Assets,Loans,Loans to Individuals
+27,Other Loans to Individuals,LNCONOTH,47387,Assets,Loans,Loans to Individuals
+28,Total Other Loans and Leases,LNOTCI,32873,Assets,Loans,Total Other Loans and Leases
+29,Bank Premises and Fixed Assets,BKPREM,27584,Assets,Other Assets,
+30,Other Real Estate Owned,ORE,368,Assets,Other Assets,
+31,Goodwill and Other Intangibles,INTAN,7123,Assets,Other Assets,
+32,All Other Assets,AOA,76262,Assets,Other Assets,
+33,,,,,,
+34,% Insured (Estimated) (footnote: 7,ESTINS,0.6569,Insured Deposits,,
+35,"Domestic Transaction Accounts: Individuals, Partnerships, and Corporations",TRNIPCOC,647906,Liabilities,Deposits,"Individuals, Partnerships, and Corporations"
+36,Domestic Transaction Accounts: US Government,TRNUSGOV,404,Liabilities,Deposits,US Government
+37,Domestic Transaction Accounts: States and Political Subdivision in US,TRNMUNI,90546,Liabilities,Deposits,States and Political Subdivision in US
+38,Domestic Transaction Accounts: Commercial Banks and Other Depository Institutions in US,TRNCBO,11321,Liabilities,Deposits,Commercial Banks and Other Depository Institutions in US
+39,"Domestic Nontransaction Accounts: Individuals, Partnerships, and Corporations",NTRIPC,862601,Liabilities,Deposits,"Individuals, Partnerships, and Corporations"
+40,Domestic Nontransaction Accounts: US Government,NTRUSGOV,1467,Liabilities,Deposits,US Government
+41,Domestic Nontransaction Accounts: States and Political Subdivision in US,NTRMUNI,132995,Liabilities,Deposits,States and Political Subdivision in US
+42,Domestic Nontransaction Accounts: Commercial Banks and Other Depository Institutions in US,NTRCOMOT,1983,Liabilities,Deposits,Commercial Banks and Other Depository Institutions in US
+43,Domestic Nontransaction Accounts: Foreign Deposits,NTRFCFG,0,Liabilities,Deposits,Foreign Deposits
+44,,,,,,
+45,Federal funds purchased and repurchase agreements,FREPP,46800,Liabilities,All other liabilities,
+46,Trading Liabilities,TRADEL,0,Liabilities,All other liabilities,
+47,Other borrowed funds,OTHBRF,40000,Liabilities,All other liabilities,
+48,FHLB advances maturity or repricing: one year or less,OTBFH1L,40000,Liabilities,All other liabilities,
+49,Subordinated debt,SUBND,0,Liabilities,All other liabilities,
+50,All other liabilities,ALLOTHL,16493,Liabilities,All other liabilities,
+51,,,,,,
+52,Net income,NETINC,20426,Net Income,,
+53,,,,,,
+54,Total risk weighted assets adjusted,RWAJT,1428339,RWA,,
+55,Tier one (core) capital,RBCT1J,178077,Capital,,
+56,Tier 1 Capital Ratio,RBCT1CER,0.12467418448981649,Capital Ratio,,
+57,Total Equity Capital,EQTOT,156883,Total Capital,,
+58,,,,,,
+59,,,,,,
+60,Assets Past Due 30-89 Days,P3ASSET,3895,Defaulted Exposure,Assets Past Due 30-89 Days,
+61,Assets Past Due 90 or More Days,P9ASSET,87,Defaulted Exposure,Assets Past Due 90 or More Days,
+62,Assets in Nonaccrual Status,NAASSET,994,Defaulted Exposure,Assets in Nonaccrual Status,
+63,,,,,,
+64,Notional Amount of Credit Derivatives,NACDIR,0,Off Balance Sheet,Derivatives,
+65,Interest Rate Contracts,RT,418,Off Balance Sheet,Derivatives,
+66,Foreign Exchange Rate Contracts,FX,0,Off Balance Sheet,Derivatives,
+67,Contracts on other Commodities and Equities,EDCM,0,Off Balance Sheet,Derivatives,
+68,Total Unused Commitments,UC,318255,Off Balance Sheet,Derivatives,
+69,,,,,,
+70,"Revolving, Open-End Lines Secured by 1-4's",UCLOC,77469,Off Balance Sheet,Total Unused Commitments,
+71,Credit Card Lines,UCCRCD,5147,Off Balance Sheet,Total Unused Commitments,
+72,"Commercial Real Estate, Construction and Land Development",UCCOMRE,43792,Off Balance Sheet,Total Unused Commitments,
+73,Securities Underwriting,UCSC,0,Off Balance Sheet,Total Unused Commitments,
+74,Other Unused Commitments,UCOTHER,191847,Off Balance Sheet,Total Unused Commitments,
+75,,,,,,
+76,Participations in Acceptances Conveyed to Others by Reporting Bank,PARTCONV,,Off Balance Sheet,Letters of Credit,
+77,Financial and Performance Standby Letters of Credit and Foreign Office Guarantees,LOCFPSB,0,Off Balance Sheet,Letters of Credit,
+78,Financial Standby Letters of Credit and Foreign Office Guarantees,LOCFSB,0,Off Balance Sheet,Letters of Credit,
+79,Performance Standby Letters of Credit,LOCPSB,0,Off Balance Sheet,Letters of Credit,
+80,Commercial and Similar Letters of Credit,LOCCOM,1624,Off Balance Sheet,Letters of Credit,
+81,,,,,,
+82,1-4 Family Residential Loans Principal Balance Sold and Securitized by Bank,SZLNRES,0,Off Balance Sheet,Securitization,
+83,Home Equity Lines Principal Balance Sold and Securitized by Bank,SZLNHEL,,Off Balance Sheet,Securitization,
+84,Credit Card Receivables Principal Balance Sold and Securitized by Bank,SZLNCRCD,,Off Balance Sheet,Securitization,
+85,Auto Loans Principal Balance Sold and Securitized by Bank,SZLAUTO,,Off Balance Sheet,Securitization,
+86,Other Consumer Loans Principal Balance Sold and Securitized by Bank,SZLNCON,,Off Balance Sheet,Securitization,
+87,Commercial and Industrial (C&I) Loans Principal Balance Sold and Securitized by Bank,SZLNCI,,Off Balance Sheet,Securitization,
+88,All Other Loans & Leases Principal Balance Sold and Securitized by Bank,SZLNOTH,0,Off Balance Sheet,Securitization,
+89,"Maximum Credit Exposure, All Other Loans & Leases Securitized by Bank",SZISLOTH,0,Off Balance Sheet,Securitization,
+90,Assets Sold with Recourse 1-4 Family Residential Loans,ASDRRES,0,Off Balance Sheet,Securitization,
+91,Assets Sold with Recourse All Other Loans and All Leases,ASDROTH,0,Off Balance Sheet,Securitization,

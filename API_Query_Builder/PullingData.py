@@ -60,7 +60,7 @@ def Pull_Data_For_All_Institutions():
     ProjectPath = getProjectPath()
     OutputMapping = 'bankfindAPI\\output\\FDIC API Pulled Data.xlsx' # Insert path of the file in the project
     OutputLocation = ProjectPath + OutputMapping      
-    df.to_excel(OutputLocation,'query1')
+    df.to_csv(OutputLocation,'query1')
 
 
 #Pull_Data_For_All_Institutions()
